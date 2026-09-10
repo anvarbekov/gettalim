@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --arena-floor: #f7f9fc;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(1100px 520px at 50% -12%, #ffffff 0%, rgba(255, 255, 255, 0) 62%),
+      linear-gradient(180deg, #eef2f8 0%, #e7edf6 100%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  .display {
+    @apply font-display tracking-tight;
+  }
+
+  :focus-visible {
+    outline: 3px solid #1f6fd0;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: #ffe0a3;
+  }
+}
+
+@layer components {
+  /* ---------- Panel & card surfaces ---------- */
+  .surface {
+    @apply rounded-xl2 bg-paper-card shadow-card border border-paper-line/70;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-extrabold uppercase tracking-[.16em] text-ink-mute;
+  }
+
+  /* ---------- Answer keypad ---------- */
+  .key {
+    @apply flex items-center justify-center rounded-xl border border-paper-line bg-white
+           text-2xl font-extrabold text-ink shadow-key transition
+           active:translate-y-[2px] active:shadow-none hover:bg-paper
+           disabled:opacity-40 disabled:pointer-events-none select-none;
+    min-height: 3.25rem;
+    touch-action: manipulation;
+  }
+
+  .key-wide {
+    @apply key text-xl;
+  }
+
+  /* ---------- Arena o'lchamlari (konteyner kengligiga bog'liq) ---------- */
+  .arena-box {
+    container-type: inline-size;
+  }
+
+  .arena-stage {
+    --ph: clamp(100px, 14vw, 250px);
+    --rope-w: clamp(64px, 10vw, 170px);
+    height: clamp(175px, 22vw, 370px);
+  }
+
+  @supports (width: 1cqw) {
+    .arena-stage {
+      --ph: min(30cqw, 290px);
+      --rope-w: min(17cqw, 190px);
+      height: min(46cqw, 420px);
+    }
+  }
+
+  /* ---------- Rope (the signature material) ---------- */
+  .rope-line {
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.22) 100%),
+      repeating-linear-gradient(
+        58deg,
+        #b98a5d 0px,
+        #e2bd90 4px,
+        #c9a173 8px,
+        #9d7143 11px,
+        #b98a5d 14px
+      );
+    box-shadow: 0 3px 6px -2px rgba(18, 35, 63, 0.4);
+    border-radius: 999px;
+  }
+
+  .chalk-line {
+    background-image: linear-gradient(
+      180deg,
+      rgba(18, 35, 63, 0.32) 0 12px,
+      rgba(18, 35, 63, 0) 12px 26px
+    );
+    background-size: 100% 26px;
+  }
+
+  .ground-shadow {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(18, 35, 63, 0.26) 0%,
+      rgba(18, 35, 63, 0) 70%
+    );
+  }
+
+  /* ---------- Small utilities ---------- */
+  .stat-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-paper px-3 py-1 text-sm font-bold text-ink-soft;
+  }
+
+  .link-quiet {
+    @apply text-ink-soft underline decoration-paper-line underline-offset-4 hover:text-ink hover:decoration-ink/40;
+  }
+}
+
+/* Scrollbars inside panels */
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: #ccd6e4;
+  border-radius: 99px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
