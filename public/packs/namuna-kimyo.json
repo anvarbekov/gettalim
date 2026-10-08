@@ -1,0 +1,131 @@
+{
+  "title": "Kimyo: formulalar va belgilar",
+  "subject": "Kimyo",
+  "icon": "⚗️",
+  "color": "#0f9b8e",
+  "grade": "7–8-sinf",
+  "description": "Oddiy moddalar formulalari va element belgilari.",
+  "language": "uz",
+  "questions": [
+    {
+      "type": "choice",
+      "prompt": "Suvning kimyoviy formulasi",
+      "answer": "H2O",
+      "options": [
+        "H2O",
+        "CO2",
+        "O2",
+        "NaCl"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Osh tuzining formulasi",
+      "answer": "NaCl",
+      "options": [
+        "NaCl",
+        "KCl",
+        "CaCO3",
+        "H2SO4"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Karbonat angidrid formulasi",
+      "answer": "CO2",
+      "options": [
+        "CO2",
+        "CO",
+        "O2",
+        "H2O"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Temirning kimyoviy belgisi",
+      "answer": "Fe",
+      "options": [
+        "Fe",
+        "Cu",
+        "Zn",
+        "Ag"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Oltinning kimyoviy belgisi",
+      "answer": "Au",
+      "options": [
+        "Au",
+        "Ag",
+        "Al",
+        "Fe"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Kislorodning kimyoviy belgisi",
+      "answer": "O",
+      "options": [
+        "O",
+        "H",
+        "N",
+        "C"
+      ]
+    },
+    {
+      "type": "number",
+      "prompt": "Vodorodning tartib raqami",
+      "answer": "1"
+    },
+    {
+      "type": "number",
+      "prompt": "Kislorodning tartib raqami",
+      "answer": "8"
+    },
+    {
+      "type": "choice",
+      "prompt": "Quyidagilardan qaysi biri metall?",
+      "options": [
+        "Mis",
+        "Oltingugurt",
+        "Kislorod",
+        "Azot"
+      ],
+      "answer": "Mis"
+    },
+    {
+      "type": "choice",
+      "prompt": "Suv qanday moddadir?",
+      "options": [
+        "Murakkab modda",
+        "Oddiy modda",
+        "Aralashma",
+        "Element"
+      ],
+      "answer": "Murakkab modda"
+    },
+    {
+      "type": "choice",
+      "prompt": "Havoning asosiy qismini qaysi gaz tashkil etadi?",
+      "options": [
+        "Azot",
+        "Kislorod",
+        "Vodorod",
+        "Karbonat angidrid"
+      ],
+      "answer": "Azot"
+    },
+    {
+      "type": "choice",
+      "prompt": "Kislotalar lakmus qog'ozini qanday rangga bo'yaydi?",
+      "options": [
+        "Qizil",
+        "Ko'k",
+        "Yashil",
+        "Sariq"
+      ],
+      "answer": "Qizil"
+    }
+  ]
+}
